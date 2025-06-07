@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="/static/login1style.css">
+</head>
+<body>
+    <div class="headline">
+        <h1>Authority Login Page</h1>
+    </div>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="loginForm"> <input type="text" name="username" placeholder="Username" required><br>
+            <input type="password" name="password" placeholder="Password" required><br>
+            <input type="submit" value="Login">
+            <div id="errorMessage" class="error-message"></div> </form>
+    </div>
+    <div class="bottom">
+        <img src= "https://www.presentations.gov.in/wp-content/uploads/2020/01/NE_Preview1.png" height="130px">
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const loginForm = document.getElementById('loginForm');
+            const errorMessage = document.getElementById('errorMessage');
+
+            loginForm.addEventListener('submit', async (event) => {
+                event.preventDefault();
+                const username = loginForm.username.value;
+                const password = loginForm.password.value;
+
+                const formData = new URLSearchParams();
+                
+                formData.append('username', username);
+                formData.append('password', password);
+
+                const response = await fetch('/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: formData,
+                });
+
+                const data = await response.json();
+
+                if (response.ok && data.access_token) {
+                    localStorage.setItem('accessToken', data.access_token);
+                    window.location.href = '/dashboard.html'; // Redirect after successful login
+                } else {
+                    errorMessage.textContent = data.detail || 'Invalid username or password.';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

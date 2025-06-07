@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Management Dashboard</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/icons.css">
+    <link rel="stylesheet" href="/static/style2.css">
+    <link rel="icon" type="image/png" href = "iconflag.png">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.2.1/dist/chart.min.js"></script>
+</head>
+<body>
+    <div class="dashboard"><!-- Dashboard -->
+        <section class="navigation"><!-- Navigation -->
+
+            <div>
+                <span class="material-icons-outlined"> dashboard </span>
+                <span class="material-icons-outlined"> trending_up </span>
+                <span class="material-icons-outlined"> people_alt </span>
+                <span class="material-icons-outlined"> insert_invitation </span>
+                <span class="material-icons-outlined">settings_suggest</span>
+            </div>
+
+
+        </section><!-- Navigation End -->
+
+        <section class="main"><!-- Main -->
+            <div class="search"><!-- Search -->
+                <form action="">
+                    <input type="text" name="search" id="searchProject" placeholder="Search Here">
+                    <span class="material-icons-outlined"> search </span>
+                </form>
+
+                <div class="notification">
+                    <span class="material-icons-outlined"> notifications </span>
+                    <span class="material-icons-outlined"> edit </span>
+                </div>
+            </div><!-- Search End -->
+
+            <div class="title">
+                <h1>Latest Updates: </h1>
+
+                <label for="projects">Sort By</label>
+                <select name="projects" id="projectFilter">
+                    <option value="">...</option>
+                    <option value="recent">Recent Project</option>
+                    <option value="finished">Finished Project</option>
+                    <option value="ongoing">Ongoing Project</option>
+                    <option value="stalled">Stalled Project</option>
+                </select>
+
+            </div>
+
+            <div class="project_list"><!-- Project List -->
+
+                <div class="project" data-status="finished" title="Finished Project"><!-- Project1 -->
+                    <a href="revenue.html" class = "textlinks" target="_blank"><div class="category category_color1"></div>
+                    <h2>Registered Users</h2>
+                    <p>Active recently</p>
+
+
+                    <div class="meta">
+                        <div class="contributors">
+                        </div>
+                        <span class="material-icons-outlined">more_vert</span>
+                    </div></a>
+                </div><!-- Project1 End -->
+
+                <div class="project" data-status="ongoing" title="Ongoing Project"><!-- Project2 -->
+                    <a href="laworder.html" class = "textlinks" target="_blank"><div class="category"></div>
+                    <h2>Hospital Tab</h2>
+                    <p>Accessed Recently</p>
+
+
+                    <div class="meta">
+                        <div class="contributors">
+                        </div>
+                        <span class="material-icons-outlined">more_vert</span>
+                    </div></a>
+                </div><!-- Project2 End -->
+
+                <div class="project" data-status="stalled" title="Stalled Project"><!-- Project3 -->
+                    <a href="publicworks.html" class = "textlinks" target="_blank"><div class="category category_color3"></div>
+                    <h2>Police tab</Table></h2>
+                    <p>1 day ago</p>
+
+                    <div class="meta">
+                        <div class="contributors">
+                        </div>
+                        <span class="material-icons-outlined">more_vert</span>
+                    </div></a>
+                </div><!-- Project3 End -->
+
+                <div class="project" data-status="recent" title="Recent Project"><!-- Project4 -->
+                    <a href="education.html" class = "textlinks" target="_blank"><div class="category category_color4"></div>
+                    <h2>NDRF Tab</h2>
+                    <p>3 days ago</p>
+
+                    <div class="meta">
+                        <span class="material-icons-outlined">more_vert</span>
+                    </div></a>
+                </div><!-- Project4 End -->
+
+                <div class="project" data-status="ongoing" title="Ongoing Project"><!-- Project5 -->
+                    <a href="health.html" class = "textlinks" target="_blank"><div class="category"></div>
+                    <h2>Administration Tab</h2>
+                    <p>5 days ago</p>
+
+                    <div class="meta">
+                        <span class="material-icons-outlined">more_vert</span>
+                    </div></a>
+                </div><!-- Project5 End -->
+
+                <div class="project" data-status="stalled" title="Stalled Project"><!-- Project6 -->
+                    <a href="justice.html" class = "textlinks" target="_blank"><div class="category category_color3"></div>
+                    <h2>Complaints Tab</h2>
+                    <p>1 week ago</p>   
+                        <span class="material-icons-outlined">more_vert</span>
+                    </div></a>
+                </div><!-- Project6 End -->
+
+            </div><!-- Project List End -->
+
+        </section><!-- Main End -->
+
+        <section class="secondary"><!-- Secondary -->
+            <div class="chart">
+                <h2>Registered Users Breakdown</h2>
+                <canvas id="myChart" width="400" height="400"></canvas>
+
+            </div>
+            </div><!-- Recent Project End -->
+
+        </section><!-- Secondary End -->
+
+    </div><!-- Dashboard End-->
+    
+    <script src="/static/script2.js" > </script>
+</body>
+</html>

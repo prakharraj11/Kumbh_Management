@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px -3px;
+    width: 300px;
+    text-align: center;
+    position: relative;
+}
+
+.login-container h1 {
+    margin-bottom: 20px;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.login-container input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.login-container input[type="submit"]:hover {
+    background-color: #0056b3;
+    transition: all 0.5s;
+}
+
+.headline {
+    text-align: center;
+    margin-bottom: 0px;
+    position: absolute; /* Absolute positioning */
+    top: 70px; /* Adjusting top position */
+    left: 50%; /* Centering horizontally */
+    transform: translateX(-50%); /* Centering horizontally */
+    background-color: #ffffff;/* Background color */
+    padding: 0 10px; /* Padding */
+    border-radius: 4px; /* Border radius */
+}
+
+.bottom {
+    text-align: center;
+    margin-bottom: 0px;
+    position: absolute; /* Absolute positioning */
+    bottom: 50px; /* Adjusting top position */
+    left: 50%; /* Centering horizontally */
+    transform: translateX(-50%); /* Centering horizontally */
+    background-color: #ffffff;/* Background color */
+    padding: 0 10px; /* Padding */
+    border-radius: 4px; /* Border radius */
+}
+ 
+        
